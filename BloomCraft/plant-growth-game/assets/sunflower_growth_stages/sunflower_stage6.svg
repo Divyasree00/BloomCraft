@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Soil -->
+  <g id="soil">
+    <rect x="0" y="150" width="200" height="50" fill="#a47551"/>
+  </g>
+
+
+  <!-- Stem -->
+  <g id="stem">
+    <path d="M100 150 Q100 85 100 30" stroke="#4f8a3f" stroke-width="5" fill="none"/>
+  </g>
+
+  <!-- Leaves -->
+  <g id="leaves" fill="#5fa33f">
+    <path d="M85 110 C55 90, 65 140, 85 140 C105 140, 90 120, 85 110 Z"/>
+    <path d="M115 115 C145 90, 155 140, 115 145 C95 140, 110 120, 115 115 Z"/>
+    <path d="M90 80 C70 65, 75 105, 90 110 Z"/>
+    <path d="M110 85 C130 65, 135 110, 110 115 Z"/>
+  </g>
+
+  <!-- Flower -->
+  <g id="flower">
+    <!-- Petals arranged in circular symmetry -->
+    <g id="petals" fill="#ffeb3b" stroke="#e0c200" stroke-width="0.5">
+      <!-- 20 evenly distributed petals -->
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(0,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(18,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(36,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(54,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(72,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(90,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(108,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(126,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(144,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(162,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(180,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(198,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(216,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(234,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(252,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(270,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(288,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(306,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(324,100,25)"/>
+      <path d="M100 25 L100 0 Q105 -10 110 0 Z" transform="rotate(342,100,25)"/>
+    </g>
+
+    <!-- Center disk -->
+    <g id="center">
+      <circle cx="100" cy="25" r="13" fill="#5c3b17"/>
+      <circle cx="100" cy="25" r="7" fill="#3a240e"/>
+    </g>
+  </g>
+</svg>

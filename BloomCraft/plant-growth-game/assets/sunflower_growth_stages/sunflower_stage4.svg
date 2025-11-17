@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g id="soil" fill="#c2a878"><rect x="0" y="150" width="200" height="50"/></g>
+  <g id="water" fill="#a3d5ff"><rect x="0" y="140" width="200" height="10"/></g>
+  <g id="stem" fill="#6da93f"><rect x="98" y="60" width="4" height="80" rx="2"/></g>
+  <g id="leaf1" fill="#5fa33f"><path d="M85 110 C70 95, 65 125, 85 130 Z"/></g>
+  <g id="leaf2" fill="#5fa33f"><path d="M115 120 C135 100, 145 130, 115 135 Z"/></g>
+  <g id="leaf3" fill="#5fa33f"><path d="M90 90 C75 80, 70 100, 90 105 Z"/></g>
+  <g id="leaf4" fill="#5fa33f"><path d="M110 100 C125 85, 130 105, 110 110 Z"/></g>
+</svg>

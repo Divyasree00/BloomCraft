@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g id="soil" fill="#c2a878"><rect x="0" y="150" width="200" height="50"/></g>
+  <g id="water" fill="#a3d5ff"><rect x="0" y="140" width="200" height="10"/></g>
+  <g id="stem" fill="#5f9935"><rect x="98" y="40" width="4" height="100" rx="2"/></g>
+  <g id="leaf1" fill="#5fa33f"><path d="M85 110 C65 90, 60 130, 85 135 Z"/></g>
+  <g id="leaf2" fill="#5fa33f"><path d="M115 120 C135 90, 145 135, 115 140 Z"/></g>
+  <g id="leaf3" fill="#5fa33f"><path d="M90 80 C75 65, 70 95, 90 100 Z"/></g>
+  <g id="leaf4" fill="#5fa33f"><path d="M110 85 C130 65, 135 95, 110 100 Z"/></g>
+  <g id="bud" fill="#d4b55e"><circle cx="100" cy="35" r="8"/></g>
+</svg>

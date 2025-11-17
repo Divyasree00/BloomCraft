@@ -1,0 +1,253 @@
+/* Dark fantasy garden theme */
+:root {
+  --bg-0: #07090f;
+  --bg-1: #0b0f18;
+  --fg: #e7f5ff;
+  --muted: #9fb3c8;
+  --accent: #7cdaff;
+  --accent-2: #b983ff;
+  --success: #9aff7a;
+  --danger: #ff6b6b;
+  --glow: 0 0 24px rgba(124, 218, 255, 0.35), 0 0 64px rgba(185, 131, 255, 0.15);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--fg);
+  background: radial-gradient(1200px 800px at 20% 10%, #0a1324, transparent),
+              radial-gradient(1400px 900px at 80% 0%, #0e0f2a, transparent),
+              linear-gradient(180deg, var(--bg-1), var(--bg-0));
+  overflow: hidden;
+}
+
+#background { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.vignette { position: absolute; inset: 0; box-shadow: inset 0 0 200px rgba(0,0,0,0.65); }
+
+#particles { position: absolute; inset: 0; overflow: hidden; filter: blur(0.2px) saturate(120%); }
+.particle {
+  position: absolute;
+  width: 6px; height: 6px; border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, var(--accent), transparent 70%);
+  box-shadow: 0 0 12px rgba(124, 218, 255, 0.65), 0 0 28px rgba(185, 131, 255, 0.3);
+  opacity: 0.8;
+}
+
+.topbar {
+  position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px; gap: 16px;
+  background: linear-gradient(180deg, rgba(15,19,32,0.9), rgba(10,12,20,0.3));
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(124,218,255,0.15);
+}
+.title { display: flex; align-items: center; gap: 12px; }
+.title h1 { font-size: 18px; letter-spacing: 0.5px; margin: 0; }
+
+.flower-select { display: flex; align-items: center; gap: 8px; color: var(--muted); }
+.flower-select select {
+  background: rgba(12,18,28,0.6);
+  color: var(--fg);
+  border: 1px solid rgba(124,218,255,0.28);
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.elements { display: flex; gap: 10px; }
+.element {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 12px; border-radius: 10px; border: 1px solid rgba(124,218,255,0.28);
+  background: rgba(12,18,28,0.6);
+  color: var(--fg); cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.element:hover { transform: translateY(-1px); box-shadow: var(--glow); }
+.element:active { transform: translateY(0px) scale(0.98); }
+.element img { width: 22px; height: 22px; display: block; }
+.element.active { background: rgba(124,218,255,0.12); box-shadow: var(--glow); }
+
+.arena {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  padding: 24px; min-height: calc(100vh - 144px);
+}
+
+.player-side { 
+  background: linear-gradient(180deg, rgba(10,16,26,0.6), rgba(10,14,22,0.2));
+  border: 1px solid rgba(124,218,255,0.18);
+  border-radius: 16px; padding: 16px 16px 24px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+}
+.player-side h2 { margin: 0 0 8px; font-size: 14px; color: var(--muted); font-weight: 600; }
+.plant-frame { position: relative; aspect-ratio: 1/1; width: 100%; max-width: 520px; margin: 0 auto; }
+.plant-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 8px 22px rgba(124,218,255,0.15)); }
+.plant-frame .glow { position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 60px rgba(185,131,255,0.12); border-radius: 16px; }
+
+.bottombar {
+  position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px; gap: 16px;
+  color: var(--muted);
+  background: linear-gradient(0deg, rgba(15,19,32,0.9), rgba(10,12,20,0.3));
+  border-top: 1px solid rgba(124,218,255,0.15);
+}
+
+#status { font-weight: 600; color: #c7d7ea; }
+#room-info { font-size: 12px; opacity: 0.9; }
+
+/* Winner banner */
+.winner-banner {
+  position: fixed; left: 50%; top: 10%; transform: translateX(-50%);
+  padding: 14px 18px; border-radius: 12px;
+  background: rgba(18, 30, 54, 0.85);
+  border: 1px solid rgba(124,218,255,0.3);
+  box-shadow: var(--glow);
+  color: #eafff7; font-weight: 800; letter-spacing: 0.4px;
+  z-index: 5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .arena { grid-template-columns: 1fr; gap: 16px; padding: 16px; }
+  .topbar { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .elements { width: 100%; flex-wrap: wrap; }
+}
+/* 🌿 Setup Screen */
+.setup-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.setup-box {
+  background: #141414;
+  padding: 40px 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.setup-box input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.setup-box button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #9b5cff, #b983ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.setup-box button:hover {
+  transform: scale(1.05);
+}
+
+.room-link {
+  color: #b983ff;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+/* 🌿 Winner Screen */
+.winner-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.5s ease;
+}
+
+.winner-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.winner-box {
+  text-align: center;
+  background: #141414;
+  padding: 50px 60px;
+  border-radius: 25px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+}
+
+.winner-box h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.winner-box button {
+  background: linear-gradient(135deg, #b983ff, #9b5cff);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.winner-box button:hover {
+  transform: scale(1.1);
+}
+#copy-link-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #b983ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+#copy-link-btn:hover {
+  background: #a66bff;
+}
+.hidden {
+  display: none;
+}
+
+/* 🎊 Confetti Effect - ADD THIS AT THE END OF YOUR style.css */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  z-index: 100000;
+  animation: confetti-fall linear forwards;
+  opacity: 0.9;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+

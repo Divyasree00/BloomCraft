@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BloomCraft</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 🌸 Game Setup Screen -->
+    <div id="setup-screen" class="setup-screen">
+      <div class="setup-box">
+        <h2>🌿 Welcome to BloomCraft</h2>
+        <input id="player-name" type="text" placeholder="Enter your name..." />
+        <div class="room-actions">
+          <button id="create-room-btn">Create Room</button>
+          <input id="join-code" type="text" placeholder="Enter room code..." />
+          <button id="join-room-btn">Join Room</button>
+        </div>
+        
+        <div id="room-link-display" class="room-link"></div>
+        <button id="copy-link-btn" class="hidden">📋 Copy Room Link</button>
+        
+      </div>
+    </div>
+
+    <!-- 🌙 Game Background -->
+    <div id="background">
+      <div id="particles"></div>
+      <div class="vignette"></div>
+    </div>
+
+    <!-- 🌸 Game UI -->
+    <header class="topbar">
+      <div class="title">
+        <span>🌙</span>
+        <h1>BloomCraft</h1>
+      </div>
+      <div class="flower-select">
+        <label for="flower-select">Flower:</label>
+        <select id="flower-select">
+          <option value="lotus">Lotus</option>
+          <option value="rose">Rose</option>
+          <option value="sunflower">Sunflower</option>
+        </select>
+      </div>
+      <div class="elements">
+        <button class="element" data-element="sun" title="Sun">
+          <img src="assets/sun.svg" alt="sun" />
+          <span>Sun</span>
+        </button>
+        <button class="element" data-element="water" title="Water">
+          <img src="assets/water.svg" alt="water" />
+          <span>Water</span>
+        </button>
+        <button class="element" data-element="soil" title="Soil">
+          <img src="assets/soil.svg" alt="soil" />
+          <span>Soil</span>
+        </button>
+        <button class="element" data-element="food" title="Food">
+          <img src="assets/food.svg" alt="food" />
+          <span>Food</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="arena">
+      <section class="player-side my-side">
+        <h2 id="my-player-name">My Plant</h2>
+        <div class="plant-frame">
+          <img id="my-plant" src="assets/lotus_stage1.svg" alt="My plant" />
+          <div class="glow"></div>
+        </div>
+      </section>
+
+      <section class="player-side opp-side">
+        <h2 id="opp-player-name">Opponent</h2>
+        <div class="plant-frame">
+          <img id="opp-plant" src="assets/lotus_stage1.svg" alt="Opponent plant" />
+          <div class="glow"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bottombar">
+      <div id="status">Stage 1: Seed awaiting elements…</div>
+      <div id="room-info"></div>
+    </footer>
+
+    <!-- GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 🌸 Winner Screen -->
+<div id="winner-screen" class="winner-screen hidden">
+  <div class="winner-box">
+    <h1 id="winner-text">🌼 You Won!</h1>
+    <button id="play-again-btn">Play Again</button>
+  </div>
+</div>
+
+
+    <!-- App Script -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

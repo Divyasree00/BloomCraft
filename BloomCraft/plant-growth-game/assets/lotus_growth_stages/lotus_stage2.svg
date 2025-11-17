@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g id="water">
+    <rect y="130" width="200" height="70" fill="#b3e5fc" />
+  </g>
+  <g id="soil">
+    <ellipse cx="100" cy="160" rx="90" ry="15" fill="#a1887f" />
+  </g>
+  <g id="seed">
+    <ellipse cx="100" cy="150" rx="9" ry="5" fill="#6d4c41" />
+  </g>
+  <g id="stem">
+    <path d="M100 148 Q102 135 98 120" stroke="#81c784" stroke-width="3" fill="none" />
+  </g>
+</svg>

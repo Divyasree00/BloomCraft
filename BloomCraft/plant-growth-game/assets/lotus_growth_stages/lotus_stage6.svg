@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Water (full bottom) -->
+  <g id="water">
+    <rect y="120" width="200" height="80" fill="#b3e5fc" />
+    <ellipse cx="100" cy="120" rx="100" ry="15" fill="#aee7ff" />
+  </g>
+
+  <!-- Soil -->
+  <g id="soil">
+    <ellipse cx="100" cy="160" rx="90" ry="15" fill="#8d6e63" />
+  </g>
+
+  <!-- Main Stem -->
+  <g id="stem">
+    <path d="M100 150 Q100 100 100 50" stroke="#2e7d32" stroke-width="4" fill="none" />
+  </g>
+
+  <!-- Main Leaves -->
+  <g id="leaves" fill="#66bb6a">
+    <ellipse cx="75" cy="100" rx="25" ry="12" />
+    <ellipse cx="125" cy="105" rx="25" ry="12" />
+  </g>
+
+  <!-- Lotus Flower -->
+  <g id="flower">
+    <!-- Center -->
+    <circle cx="100" cy="40" r="10" fill="#f06292" />
+
+    <!-- Inner Petals -->
+    <path d="M100 40 Q90 30 100 20 Q110 30 100 40Z" fill="#f8bbd0" />
+    <path d="M100 40 Q88 34 85 25 Q92 32 100 40Z" fill="#f48fb1" />
+    <path d="M100 40 Q112 34 115 25 Q108 32 100 40Z" fill="#f48fb1" />
+
+    <!-- Mid-layer Petals -->
+    <path d="M100 40 Q80 35 75 20 Q88 25 100 40Z" fill="#f8bbd0" />
+    <path d="M100 40 Q120 35 125 20 Q112 25 100 40Z" fill="#f8bbd0" />
+    <path d="M100 40 Q85 45 80 35 Q90 38 100 40Z" fill="#f48fb1" />
+    <path d="M100 40 Q115 45 120 35 Q110 38 100 40Z" fill="#f48fb1" />
+
+    <!-- Outer Petals -->
+    <path d="M100 40 Q70 40 60 25 Q80 30 100 40Z" fill="#f8bbd0" />
+    <path d="M100 40 Q130 40 140 25 Q120 30 100 40Z" fill="#f8bbd0" />
+    <path d="M100 40 Q75 50 65 40 Q85 42 100 40Z" fill="#f48fb1" />
+    <path d="M100 40 Q125 50 135 40 Q115 42 100 40Z" fill="#f48fb1" />
+    <path d="M100 40 Q85 55 90 70 Q95 55 100 40Z" fill="#f8bbd0" />
+    <path d="M100 40 Q115 55 110 70 Q105 55 100 40Z" fill="#f48fb1" />
+    <path d="M100 40 Q95 50 100 60 Q105 50 100 40Z" fill="#f8bbd0" />
+  </g>
+
+  <!-- Baby Buds sprouting from soil -->
+  <g id="buds" fill="#f48fb1" stroke="#2e7d32" stroke-width="1.5">
+    <!-- Left bud -->
+    <path d="M70 160 Q68 130 70 110 Q72 130 70 160Z" fill="#f48fb1" />
+    <ellipse cx="70" cy="108" rx="5" ry="9" fill="#f8bbd0" />
+    <path d="M70 160 Q70 150 70 110" stroke="#2e7d32" stroke-width="2" />
+
+    <!-- Right bud -->
+    <path d="M130 160 Q128 135 130 115 Q132 135 130 160Z" fill="#f48fb1" />
+    <ellipse cx="130" cy="113" rx="5" ry="9" fill="#f8bbd0" />
+    <path d="M130 160 Q130 150 130 115" stroke="#2e7d32" stroke-width="2" />
+  </g>
+</svg>

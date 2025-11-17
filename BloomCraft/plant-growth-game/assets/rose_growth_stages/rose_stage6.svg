@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Soil -->
+  <g id="soil">
+    <ellipse cx="100" cy="160" rx="90" ry="15" fill="#a1887f" />
+  </g>
+
+  <!-- Water -->
+  <g id="water">
+    <rect y="130" width="200" height="70" fill="#c5e1a5" />
+  </g>
+
+  <!-- Stem with Thorns -->
+  <g id="stem">
+    <path d="M100 150 Q101 90 100 50" stroke="#2e7d32" stroke-width="4" fill="none" />
+    <!-- Thorns -->
+    <path d="M97 120 L92 118 L97 115 Z" fill="#33691e" />
+    <path d="M103 110 L108 108 L103 105 Z" fill="#33691e" />
+    <path d="M97 95 L92 93 L97 90 Z" fill="#33691e" />
+    <path d="M103 80 L108 78 L103 75 Z" fill="#33691e" />
+  </g>
+
+  <!-- Leaves -->
+  <g id="leaves">
+    <!-- Main leaves -->
+    <ellipse cx="85" cy="90" rx="14" ry="8" fill="#66bb6a" />
+    <ellipse cx="115" cy="95" rx="14" ry="8" fill="#66bb6a" />
+    <!-- Extra leaves -->
+    <ellipse cx="80" cy="110" rx="13" ry="7" fill="#57a05a" transform="rotate(-10 80 110)" />
+    <ellipse cx="120" cy="115" rx="13" ry="7" fill="#57a05a" transform="rotate(10 120 115)" />
+    <ellipse cx="90" cy="125" rx="12" ry="7" fill="#4caf50" transform="rotate(-15 90 125)" />
+    <ellipse cx="110" cy="130" rx="12" ry="7" fill="#4caf50" transform="rotate(15 110 130)" />
+  </g>
+
+  <!-- Rose Flower -->
+  <g id="flower">
+    <!-- Center -->
+    <circle cx="100" cy="40" r="8" fill="#c62828" />
+
+    <!-- Inner Petals -->
+    <path d="M100 40 Q95 28 105 28 Q110 35 100 40Z" fill="#ef5350" />
+    <path d="M100 40 Q90 30 100 22 Q110 30 100 40Z" fill="#f44336" />
+    <path d="M100 40 Q94 36 90 28 Q97 33 100 40Z" fill="#e53935" />
+    <path d="M100 40 Q106 36 110 28 Q103 33 100 40Z" fill="#e53935" />
+
+    <!-- Middle Petals -->
+    <path d="M100 40 Q80 30 90 18 Q100 28 100 40Z" fill="#ef5350" />
+    <path d="M100 40 Q120 30 110 18 Q100 28 100 40Z" fill="#ef5350" />
+    <path d="M100 40 Q85 35 80 25 Q90 28 100 40Z" fill="#f44336" />
+    <path d="M100 40 Q115 35 120 25 Q110 28 100 40Z" fill="#f44336" />
+
+    <!-- Outer Petals -->
+    <path d="M100 40 Q75 35 70 20 Q85 25 100 40Z" fill="#e57373" />
+    <path d="M100 40 Q125 35 130 20 Q115 25 100 40Z" fill="#e57373" />
+    <path d="M100 40 Q85 45 75 30 Q90 35 100 40Z" fill="#ef9a9a" />
+    <path d="M100 40 Q115 45 125 30 Q110 35 100 40Z" fill="#ef9a9a" />
+
+    <!-- Subtle Shine -->
+    <circle cx="100" cy="40" r="10" fill="url(#roseShine)" opacity="0.25" />
+  </g>
+
+  <!-- Gradient -->
+  <defs>
+    <radialGradient id="roseShine" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#e53935" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+</svg>

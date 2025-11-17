@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g id="soil">
+    <ellipse cx="100" cy="160" rx="90" ry="15" fill="#a1887f" />
+  </g>
+  <g id="water">
+    <rect y="130" width="200" height="70" fill="#c5e1a5" />
+  </g>
+  <g id="seed">
+    <ellipse cx="100" cy="150" rx="10" ry="6" fill="#5d4037" />
+  </g>
+</svg>
